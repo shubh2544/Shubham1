@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: index.html
+    destination: /var/www/html/test
+hooks:
+  BeforeInstall:
+    - location: deploy/init
+      runas: root
+  ApplicationStart:
+    - location: deploy/restart
+      runas: root
+  ValidateService:
