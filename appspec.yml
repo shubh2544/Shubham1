@@ -10,4 +10,3 @@ hooks:
   ApplicationStart:
     - location: deploy/restart
       runas: root
-  ValidateService:
